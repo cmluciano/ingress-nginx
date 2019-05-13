@@ -50,6 +50,6 @@ make -C ${DIR}/../../ e2e-test-image
 
 echo "copying docker images to cluster..."
 kind load docker-image --name="${KIND_CLUSTER_NAME}" ${REGISTRY}/nginx-ingress-controller:${TAG}
-kind load docker-image --name="${KIND_CLUSTER_NAME}" nginx-ingress-controller:e2e
+kind load docker-image --name="${KIND_CLUSTER_NAME}" ${REGISTRY}/nginx-ingress-controller:e2e
 
 make -C ${DIR}/../../ e2e-test

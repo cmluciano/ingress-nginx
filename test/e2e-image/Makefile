@@ -1,4 +1,4 @@
-IMAGE=nginx-ingress-controller:e2e
+IMAGE=${REGISTRY}/nginx-ingress-controller:e2e
 
 .PHONY: all container getbins clean
 

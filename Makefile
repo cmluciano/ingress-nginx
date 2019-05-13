@@ -213,7 +213,7 @@ e2e-test:
 		--env="FOCUS=$(FOCUS)" \
 		--env="SLOW_E2E_THRESHOLD=$(SLOW_E2E_THRESHOLD)" \
 		--overrides='{ "apiVersion": "v1", "spec":{"serviceAccountName": "ingress-nginx-e2e"}}' \
-		e2e --image=nginx-ingress-controller:e2e
+		e2e --image=${REGISTRY}/nginx-ingress-controller:e2e
 
 .PHONY: e2e-test-image
 e2e-test-image:
