@@ -99,9 +99,6 @@ else
   exit
 fi
 
-# Remove after https://github.com/kubernetes/ingress-nginx/pull/4271 is merged
-docker tag ${REGISTRY}/nginx-ingress-controller-${ARCH}:${TAG} ${REGISTRY}/nginx-ingress-controller:${TAG}
-
 # Preload images used in e2e tests
 docker pull openresty/openresty:1.15.8.2-alpine
 docker pull moul/grpcbin
